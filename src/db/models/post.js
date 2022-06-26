@@ -55,4 +55,14 @@ Post.getPostsByUserId = async function (userId) {
   });
 };
 
+
+Post.updatePostByUserId = async function (userId, newText){
+  return  Post.update({
+    text: newText,
+  },
+  {
+    where: {id: userId},
+  });
+  
+}
 module.exports = Post;
