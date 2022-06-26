@@ -7,6 +7,8 @@ const router = express.Router();
  * Create a new blog post
  * req.body is expected to contain {text: required(string), tags: optional(Array<string>)}
  */
+
+
 router.post('/', async (req, res, next) => {
   try {
     // Validation
